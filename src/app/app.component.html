@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span><a [routerLink]="['/home']" >Boost</a></span>
+      <span class="example-spacer"></span>
+      <span>
+        <a *ngIf="authservice.loggedIn()" (click)="authservice.logOut()">Logout</a>
+      </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
